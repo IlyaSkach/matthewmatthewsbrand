@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/matthewmatthewsbrand.git/static/css/main.0e54b913.css",
+    "main.js": "/matthewmatthewsbrand.git/static/js/main.0da9c414.js",
+    "static/js/453.adf37cbd.chunk.js": "/matthewmatthewsbrand.git/static/js/453.adf37cbd.chunk.js",
+    "static/media/logo.svg": "/matthewmatthewsbrand.git/static/media/logo.4aafd61d53bfea3e1c805b47ccd7592b.svg",
+    "index.html": "/matthewmatthewsbrand.git/index.html",
+    "main.0e54b913.css.map": "/matthewmatthewsbrand.git/static/css/main.0e54b913.css.map",
+    "main.0da9c414.js.map": "/matthewmatthewsbrand.git/static/js/main.0da9c414.js.map",
+    "453.adf37cbd.chunk.js.map": "/matthewmatthewsbrand.git/static/js/453.adf37cbd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e54b913.css",
+    "static/js/main.0da9c414.js"
+  ]
+}
