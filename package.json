@@ -2,6 +2,7 @@
   "name": "matthewmatthewsbrand",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://<your-username>.github.io/<your-repo-name>",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -11,9 +12,12 @@
     "react-router-dom": "^7.1.3",
     "react-scripts": "5.0.1",
     "sass": "^1.83.4",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "gh-pages": "^4.0.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,10 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.1",
-    "tailwindcss": "^3.4.17"
   }
 }
