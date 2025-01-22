@@ -28,25 +28,25 @@ const Header = () => {
         {/* Navigation Links for Desktop */}
         <nav className="hidden md:flex space-x-8 text-sm font-medium">
          
-          <a href="#" onClick={handleLinkClick} className="hover:text-gray-400">
+          <a href="/Replic Public" onClick={handleLinkClick} className="hover:text-gray-400">
             Replic Public
           </a>
-          <a href="#" onClick={handleLinkClick} className="hover:text-gray-400">
+          <a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
             United Virtual State
           </a>
-          <a href="#" onClick={handleLinkClick} className="hover:text-gray-400">
+          <a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
             Online Distribution
           </a>
-          <a href="#" onClick={handleLinkClick} className="hover:text-gray-400">
+          <a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
             History
           </a>
-          <a href="#" onClick={handleLinkClick} className="hover:text-gray-400">
+          <a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
             About Us
           </a>
-          <a href="#" onClick={handleLinkClick} className="hover:text-gray-400">
+          <a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
             Account
           </a>
-          <a href="#" onClick={handleLinkClick} className="hover:text-gray-400">
+          <a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
             Contact
           </a>
         </nav>
