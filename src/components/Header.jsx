@@ -51,6 +51,8 @@ const Header = () => {
           </a>
         </nav>
 
+        
+
         {/* Hamburger Menu Button for Mobile */}
         <button
           className="block md:hidden text-white focus:outline-none"
@@ -97,7 +99,7 @@ const Header = () => {
             <a href="/" className="hover:text-gray-400">
               History
             </a>
-            <a href="/" className="hover:text-gray-400">
+            <a href="/about" className="hover:text-gray-400">
               About Us
             </a>
             <a href="/" className="hover:text-gray-400">
