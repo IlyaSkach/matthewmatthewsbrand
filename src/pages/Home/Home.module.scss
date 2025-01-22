@@ -1,4 +1,217 @@
-.title {
-	color: red;
+.herosection {
+	position: relative;
+	width: 100%;
+	height: 340px; // Базовая высота
+	background: url("../../assets/images/homepage.png") no-repeat center center; // Замените на путь к вашему изображению
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
+	padding: 20px;
+
+	// Полупрозрачный затемняющий слой
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.5); // Затемнение
+		z-index: 1;
+	}
+
+	.herocontent {
+		position: relative;
+		z-index: 2;
+		color: #fff;
+
+		h1 {
+			font-size: 1.5rem;
+			font-weight: bold;
+			margin-bottom: 10px;
+
+			// Адаптивность заголовка
+			@media (min-width: 768px) {
+				font-size: 2rem;
+			}
+
+			@media (min-width: 1024px) {
+				font-size: 2.5rem;
+			}
+		}
+
+		p {
+			text-align: justify;
+			font-size: 0.875rem;
+
+			// Адаптивность текста
+			@media (min-width: 768px) {
+				font-size: 1rem;
+			}
+
+			@media (min-width: 1024px) {
+				font-size: 1.125rem;
+			}
+		}
+	}
+}
+
+.aboutsection {
+  background-color: #b0b0b0;
+  padding: 130px 0 158px 64px;
+  color: #fff;
+
+  h1 {
+    font-family: Arial;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46px;
+  }
+
+  p {
+    margin-top: 15px;
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: left;
+    max-width: 1024px;
+  }
+
+  button {
+    margin-top: 30px;
+    color: black;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 100px 20px;
+    
+    h1 {
+      font-size: 35px;
+      line-height: 40px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 80px 15px;
+
+    h1 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 10px 25px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 60px 10px;
+
+    h1 {
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    button {
+      font-size: 14px;
+      padding: 8px 20px;
+    }
+  }
+}
+
+.productsection {
+	display: flex;
+	flex-wrap: wrap;
+
+	.productsound,
+	.productmusic {
+		background-color: #919191;
+		width: 100%;
+		height: 500px;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+	.productmusic {
+		background-color: #625F5F;
+	}
+
+	button {
+		margin-top: 30px;
+		color: black;
+		padding: 14px 35px;
+		border: none;
+		border-radius: 5px;
+		background: rgb(255, 255, 255);
+		font-size: 20px;
+		font-weight: 700;
+		cursor: pointer;
+	}
+
+	@media (min-width: 768px) {
+    .productsound,
+    .productmusic {
+      width: 50%; /* На экранах от 768px и выше блоки занимают по 50% ширины */
+    }
+		
+  }
+
+  @media (max-width: 767px) {
+		
+    .productsound,
+    .productmusic {
+      height: 300px; /* Уменьшение высоты блоков на меньших экранах */
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+	
+    .productsound,
+    .productmusic {
+      height: 200px; /* Еще большее уменьшение высоты блоков на самых маленьких экранах */
+    }
+
+    button {
+      font-size: 16px;
+      padding: 10px 25px;
+    }
+  }
 }

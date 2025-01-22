@@ -40,7 +40,7 @@ const Header = () => {
           <a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
             History
           </a>
-          <a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
+          <a href="/about" onClick={handleLinkClick} className="hover:text-gray-400">
             About Us
           </a>
           <a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
