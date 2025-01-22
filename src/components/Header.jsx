@@ -85,28 +85,25 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden bg-black text-white px-6 py-4">
           <nav className="flex flex-col space-y-4">
-            <a href="#" className="hover:text-gray-400">
-              DeskDAW
-            </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               Replic Public
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               United Virtual State
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               Music Distribution
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               History
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               About Us
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               Account
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               Contact
             </a>
           </nav>
