@@ -34,7 +34,9 @@ const Header = () => {
         {/* Logo Section */}
         <div className="flex items-center space-x-3 text-center">
           <Logo />
-          <span className="text-xl font-bold">Matthew Matthews Brand</span>
+          <span className="text-xl font-bold hidden lg:block">
+            Matthew Matthews Brand
+          </span>
         </div>
 
         {/* Navigation Links for Desktop */}
@@ -237,114 +239,143 @@ const Header = () => {
         </div>
       )} */}
       {isOpen && (
-        <div className="md:hidden bg-black text-white px-6 py-4">
-          {currentSubMenu === null ? (
-            <nav className="flex flex-col space-y-4">
-              <button
-                onClick={() => openSubMenu("replic")}
-                className="flex justify-start items-center hover:text-gray-400"
+        <div className="fixed inset-0 bg-black text-white h-screen flex flex-col">
+          {/* Фиксированный хедер с логотипом и кнопкой закрытия */}
+          <div className="flex justify-between items-center px-6 py-4">
+            {/* Логотип */}
+            <Logo />
+            {/* Кнопка закрытия */}
+            <button
+              onClick={() => setIsOpen(false)}
+              className="hover:text-gray-400"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
               >
-                <span>Replic Public</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 transform transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          {/* Контент меню */}
+          <div className="flex-1 overflow-y-auto px-6 py-4">
+            {currentSubMenu === null ? (
+              <nav className="flex flex-col items-end space-y-4">
+                <button
+                  onClick={() => openSubMenu("replic")}
+                  className="flex justify-end items-center hover:text-gray-400"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-              <button
-                onClick={() => openSubMenu("music")}
-                className="flex justify-start items-center hover:text-gray-400"
-              >
-                <span>Music Production</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 transform transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
+                  <span>Replic Public</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 transform transition-transform ml-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <button
+                  onClick={() => openSubMenu("music")}
+                  className="flex justify-end items-center hover:text-gray-400"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-              <a href="/" className="hover:text-gray-400">
-                World Net States
-              </a>
-              <a href="/history" className="hover:text-gray-400">
-                Магазин
-              </a>
-              <a href="/about" className="hover:text-gray-400">
-                О нас
-              </a>
-              <a href="/product" className="hover:text-gray-400">
-                Контакты
-              </a>
-            </nav>
-          ) : (
-            <div>
-              <button
-                onClick={goBack}
-                className="flex items-center space-x-2 mb-4 hover:text-gray-400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 transform transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
+                  <span>Music Production</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 transform transition-transform ml-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <a href="/" className="hover:text-gray-400">
+                  World Net States
+                </a>
+                <a href="/history" className="hover:text-gray-400">
+                  Магазин
+                </a>
+                <a href="/about" className="hover:text-gray-400">
+                  О нас
+                </a>
+                <a href="/product" className="hover:text-gray-400">
+                  Контакты
+                </a>
+              </nav>
+            ) : (
+              <div>
+                <button
+                  onClick={goBack}
+                  className="flex items-center space-x-2 mb-4 hover:text-gray-400"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-              </button>
-              {currentSubMenu === "replic" && (
-                <nav className="flex flex-col space-y-4">
-                  <a href="/" className="hover:text-gray-400">
-                    Solo Studio Pro
-                  </a>
-                  <a href="/" className="hover:text-gray-400">
-                    Solo Studio Mini
-                  </a>
-                  <a href="/" className="hover:text-gray-400">
-                    VALVEX AMP
-                  </a>
-                </nav>
-              )}
-               {currentSubMenu === "music" && (
-                <nav className="flex flex-col space-y-4">
-                  <a href="/" className="hover:text-gray-400">
-                  Solo Studio Pro
-                  </a>
-                  <a href="/" className="hover:text-gray-400">
-                  Solo Studio Mini
-                  </a>
-                  <a href="/" className="hover:text-gray-400">
-                  VALVEX AMP
-                  </a>
-                  <a href="/" className="hover:text-gray-400">
-                  OldChannel
-                  </a>
-                </nav>
-              )}
-            </div>
-          )}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 transform transition-transform"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+                {currentSubMenu === "replic" && (
+                  <nav className="flex flex-col items-end space-y-4">
+                    <a href="/" className="hover:text-gray-400">
+                      Solo Studio Pro
+                    </a>
+                    <a href="/" className="hover:text-gray-400">
+                      Solo Studio Mini
+                    </a>
+                    <a href="/" className="hover:text-gray-400">
+                      VALVEX AMP
+                    </a>
+                    <a href="/" className="hover:text-gray-400">
+                      OldChannel
+                    </a>
+                  </nav>
+                )}
+                {currentSubMenu === "music" && (
+                  <nav className="flex flex-col items-end space-y-4">
+                    <a href="/" className="hover:text-gray-400">
+                      Mixing & Mastering
+                    </a>
+                    <a href="/" className="hover:text-gray-400">
+                      Online Artist
+                    </a>
+                    <a href="/" className="hover:text-gray-400">
+                      Distribution
+                    </a>
+                  </nav>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       )}
     </header>
