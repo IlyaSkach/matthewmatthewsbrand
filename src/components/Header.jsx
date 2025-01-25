@@ -267,7 +267,7 @@ const Header = () => {
           </div>
 
           {/* Контент меню */}
-          <div className="flex-1 overflow-y-auto px-6 py-4">
+          <div className="flex-1 overflow-y-auto px-6 py-4 mt-12">
             {currentSubMenu === null ? (
               <nav className="flex flex-col items-end space-y-4">
                 <button
