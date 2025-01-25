@@ -1,0 +1,351 @@
+.titlesection {
+	position: relative;
+	width: 100%;
+
+	background: url("../../assets/images/secondpage.png") no-repeat center center; // Замените на путь к вашему изображению
+	background-size: cover;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	// text-align: center;
+	padding: 79px;
+
+	// Полупрозрачный затемняющий слой
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		// background: rgba(0, 0, 0, 0.5); // Затемнение
+		z-index: 1;
+	}
+
+	h1 {
+		color: #fff;
+		font-family: Arial;
+		font-size: 64px;
+		font-weight: 700;
+		line-height: 74px;
+		letter-spacing: 0%;
+		text-align: left;
+
+		// Адаптивность заголовка
+		@media (min-width: 768px) {
+			font-size: 2rem;
+		}
+
+		@media (min-width: 1024px) {
+			font-size: 2.5rem;
+		}
+	}
+
+	p {
+		color: white;
+		font-family: Arial;
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 41px;
+		letter-spacing: 0%;
+		text-align: left;
+
+		// Адаптивность текста
+		@media (min-width: 768px) {
+			font-size: 1rem;
+		}
+
+		@media (min-width: 1024px) {
+			font-size: 1.125rem;
+		}
+	}
+}
+
+.linksection {
+	display: flex;
+	background-color: #000000;
+	padding: 33px 0;
+	align-items: center;
+	justify-content: space-around;
+
+	.navigation {
+		display: flex;
+		gap: 10px; /* Расстояние между ссылками */
+	}
+	.link {
+		color: rgb(255, 255, 255);
+		font-family: Arial;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: 0%;
+		text-align: left;
+		text-decoration: underline;
+		color: white;
+		position: relative;
+		display: inline-block;
+	}
+
+	:hover {
+		color: gray;
+	}
+
+	.link:not(:last-child)::after {
+		content: "/";
+		margin-left: 8px; /* Отступ между ссылкой и символом */
+		color: white; /* Цвет разделителя */
+		text-decoration: none;
+		display: inline;
+	}
+
+	.link:not(:last-child)::after {
+		text-decoration: none; /* Гарантируем, что символ "/" не будет подчеркиваться */
+		display: inline-block; /* Убираем влияние текста на оформление псевдоэлемента */
+	}
+
+	.link:last-child {
+		text-decoration: none; /* Подчеркиваем только текст последней ссылки */
+	}
+
+	.btn {
+		border-radius: 5px;
+		background: rgb(255, 255, 255);
+		color: rgb(0, 0, 0);
+		font-family: Arial;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 16px;
+		letter-spacing: 0%;
+		text-align: left;
+		padding: 9px 91px;
+	}
+}
+
+.splitSection {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 50px 0;
+	background-color: #fff;
+
+	&__content {
+		flex: 0 0 45%; /* Текст занимает 40% ширины */
+		padding: 60px;
+		h2 {
+			color: rgb(0, 0, 0);
+			font-family: Arial;
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 46px;
+			letter-spacing: 0%;
+			text-align: left;
+			margin-bottom: 30px;
+		}
+		p {
+			color: rgb(0, 0, 0);
+			font-family: Arial;
+			font-size: 20px;
+			line-height: 23px;
+			letter-spacing: 0%;
+			text-align: left;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__image {
+		flex: 0 0 55%; /* Изображение занимает 60% ширины */
+		padding-left: 80px;
+		img {
+			width: 100%;
+			height: 500px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+
+		&__content,
+		&__image {
+			padding: 10px;
+			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
+		}
+
+		&__content {
+			h2 {
+				font-size: 28px;
+				line-height: 34px;
+			}
+			p {
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+	}
+
+	@media (max-width: 480px) {
+		&__content {
+			h2 {
+				font-size: 24px;
+				line-height: 30px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+	}
+}
+
+.splitreturnSection {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 50px 0;
+	background-color: #000000;
+
+	&__content {
+		flex: 0 0 45%; /* Текст занимает 40% ширины */
+		padding: 60px;
+		h2 {
+			color: #fff;
+			font-family: Arial;
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 46px;
+			letter-spacing: 0%;
+			text-align: left;
+			margin-bottom: 30px;
+		}
+		p {
+			color: #fff;
+			font-family: Arial;
+			font-size: 20px;
+			line-height: 23px;
+			letter-spacing: 0%;
+			text-align: left;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__image {
+		flex: 1 0 55%; /* Изображение занимает 60% ширины */
+		padding-right: 80px;
+		img {
+			width: 100%;
+			height: 500px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+
+		&__content,
+		&__image {
+			padding: 10px;
+			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
+		}
+
+		&__content {
+			h2 {
+				font-size: 28px;
+				line-height: 34px;
+			}
+			p {
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+	}
+
+	@media (max-width: 480px) {
+		&__content {
+			h2 {
+				font-size: 24px;
+				line-height: 30px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+	}
+}
+
+.splityoutubeSection {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 50px 0;
+	background-color: #fff;
+
+	&__content {
+		flex: 0 0 50%; /* Текст занимает 40% ширины */
+		padding: 60px;
+		h2 {
+			color: rgb(0, 0, 0);
+			font-family: Arial;
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 46px;
+			letter-spacing: 0%;
+			text-align: left;
+			margin-bottom: 30px;
+		}
+		p {
+			color: rgb(0, 0, 0);
+			font-family: Arial;
+			font-size: 20px;
+			line-height: 23px;
+			letter-spacing: 0%;
+			text-align: left;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__image {
+		flex: 0 0 50%; /* Изображение занимает 60% ширины */
+		padding-right: 80px;
+
+		img {
+			width: 100%;
+			height: 432px;
+			border-radius: 25px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+
+		&__content,
+		&__image {
+			padding: 10px;
+			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
+		}
+
+		&__content {
+			h2 {
+				font-size: 28px;
+				line-height: 34px;
+			}
+			p {
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+	}
+
+	@media (max-width: 480px) {
+		&__content {
+			h2 {
+				font-size: 24px;
+				line-height: 30px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+	}
+}
