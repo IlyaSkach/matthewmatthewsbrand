@@ -4,10 +4,10 @@
   flex-wrap: wrap;
 
   &__content {
-    flex: 1;
+    width: 855px;
     h1 {
       padding-top: 130px;
-      padding-left: 180px;
+      padding-left: 110px;
       margin-bottom: 29px;
       font-family: Arial;
       font-size: 40px;
@@ -16,7 +16,20 @@
       letter-spacing: 0%;
       text-align: left;
     }
+
+    h3 {
+      color: rgb(0, 0, 0);
+      padding-left: 110px;
+      font-family: Arial;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 0%;
+      text-align: left;
+      margin-bottom: 30px;
+    }
     p {
+      position: relative;
       padding-left: 180px;
       font-family: Arial;
       font-size: 20px;
@@ -25,11 +38,23 @@
       letter-spacing: 0%;
       text-align: left;
       padding-bottom: 15px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 160px;
+        top: 30%;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 5px;
+        background-color: black;
+        border-radius: 50%;
+      }
     }
   }
   &__img {
+    flex: 1;
     padding-top: 130px;
-    padding-right: 116px;
+    padding-right: 40px;
   }
 
   @media (max-width: 1024px) {
@@ -93,6 +118,25 @@
       padding-top: 30px;
     }
   }
+}
+
+.email {
+  font-weight: 700;
+  color: inherit; // Сохранение цвета текста
+  text-decoration: none; // Удаление подчеркивания
+  &:hover {
+    text-decoration: underline; // Подчеркивание при наведении
+  }
+}
+
+.discl {
+  color: rgb(0, 0, 0);
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  padding-top: 30px;
+  padding-left: 110px;
 }
 
 .qwe {

@@ -103,10 +103,6 @@
 		display: inline-block; /* Убираем влияние текста на оформление псевдоэлемента */
 	}
 
-	.link:last-child {
-		text-decoration: none; /* Подчеркиваем только текст последней ссылки */
-	}
-
 	.btn {
 		border-radius: 5px;
 		background: rgb(255, 255, 255);
@@ -166,6 +162,21 @@
 		}
 	}
 
+	.btnblack {
+		color: #fff;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 37px;
+		padding: 18px 38px;
+		border-radius: 10px;
+		background: rgb(0, 0, 0);
+		&:hover {
+			box-shadow: 0 0 20px black; /* Увеличенный box-shadow */
+		
+			transition: box-shadow 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+		}
+	}
+
 	@media (max-width: 768px) {
 		flex-direction: column;
 
@@ -201,169 +212,107 @@
 	}
 }
 
-.splitreturnSection {
-	display: flex;
-	flex-direction: row-reverse;
-	flex-wrap: wrap;
-	align-items: center;
-	padding: 50px 0;
+.musicSection {
 	background-color: #000000;
+	padding: 111px 60px 111px 80px;
+	border-bottom: 1px solid #fff;
+	h2 {
+		color: rgb(255, 255, 255);
+		font-family: Arial;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 46px;
+		letter-spacing: 0%;
+		text-align: left;
+		margin-bottom: 25px;
+	}
 
-	&__content {
-		flex: 0 0 45%; /* Текст занимает 40% ширины */
-		padding: 60px;
-		h2 {
-			color: #fff;
-			font-family: Arial;
-			font-size: 40px;
-			font-weight: 700;
-			line-height: 46px;
-			letter-spacing: 0%;
-			text-align: left;
-			margin-bottom: 30px;
-		}
+	&__parts {
+		display: flex;
+		gap: 140px;
 		p {
 			color: #fff;
-			font-family: Arial;
 			font-size: 20px;
+			font-weight: 700;
 			line-height: 23px;
-			letter-spacing: 0%;
-			text-align: left;
-			margin-bottom: 15px;
-			position: relative;
-			padding-left: 20px;
-			&::before {
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 9%;
-				transform: translateY(-50%);
-				width: 7px;
-				height: 7px;
-				background-color: white;
-				border-radius: 50%;
-			}
+			margin-bottom: 30px;
 		}
-	}
-
-	&__image {
-		flex: 1 0 55%; /* Изображение занимает 60% ширины */
-		padding-right: 80px;
-		img {
-			width: 100%;
-			height: 500px;
+		&_song {
+			display: flex;
+			flex-direction: column;
 		}
-	}
-
-	@media (max-width: 768px) {
-		flex-direction: column;
-
-		&__content,
-		&__image {
-			padding: 10px;
-			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
+		&_artist {
+			display: flex;
+			flex-direction: column;
 		}
-
-		&__content {
-			h2 {
-				font-size: 28px;
-				line-height: 34px;
-			}
-			p {
-				font-size: 16px;
-				line-height: 22px;
-			}
-		}
-	}
-
-	@media (max-width: 480px) {
-		&__content {
-			h2 {
-				font-size: 24px;
-				line-height: 30px;
-			}
-			p {
-				font-size: 14px;
-				line-height: 20px;
-			}
+		&_img {
+			display: flex;
+			
+			gap: 10px;
 		}
 	}
 }
 
-.splityoutubeSection {
-	display: flex;
-	flex-direction: row-reverse;
-	flex-wrap: wrap;
-	align-items: center;
-	padding: 50px 0;
-	background-color: #fff;
+.historysection {
+	&__music {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 15px;
+		margin-top: 15px;
+	}
+	&__first {
+		color: #fff;
+		font-family: Arial;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 18px;
+		letter-spacing: 0%;
+		text-align: left;
+		margin-bottom: 0px;
+	}
+	&__second {
+		color: #fff;
+		font-family: Arial;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: 0%;
+		text-align: left;
+	}
+}
 
-	&__content {
-		flex: 0 0 50%; /* Текст занимает 40% ширины */
-		padding: 60px;
-		h2 {
-			color: rgb(0, 0, 0);
-			font-family: Arial;
-			font-size: 40px;
-			font-weight: 700;
-			line-height: 46px;
-			letter-spacing: 0%;
-			text-align: left;
-			margin-bottom: 30px;
-		}
-		p {
-			color: rgb(0, 0, 0);
-			font-family: Arial;
-			font-size: 20px;
-			line-height: 23px;
-			letter-spacing: 0%;
-			text-align: left;
-			margin-bottom: 15px;
-		}
+.imageContainer {
+	position: relative;
+	display: inline-block;
+
+	.image {
+		display: block;
 	}
 
-	&__image {
-		flex: 0 0 50%; /* Изображение занимает 60% ширины */
-		padding-right: 80px;
+	.textOverlay {
+		position: absolute;
+		
+		top: 0px;
+		right: 22px;
+		transform: translateY(50%) rotate(-90deg);
+		white-space: nowrap;
+		transform-origin: right;
+		color: white;
+		font-size: 16px;
+		font-weight: bold;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		color: #fff;
+		font-family: Arial;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 46px;
 
-		img {
-			width: 100%;
-			height: 432px;
-			border-radius: 25px;
-		}
 	}
 
-	@media (max-width: 768px) {
-		flex-direction: column;
-
-		&__content,
-		&__image {
-			padding: 10px;
-			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
-		}
-
-		&__content {
-			h2 {
-				font-size: 28px;
-				line-height: 34px;
-			}
-			p {
-				font-size: 16px;
-				line-height: 22px;
-			}
-		}
-	}
-
-	@media (max-width: 480px) {
-		&__content {
-			h2 {
-				font-size: 24px;
-				line-height: 30px;
-			}
-			p {
-				font-size: 14px;
-				line-height: 20px;
-			}
-		}
+	&:hover .textOverlay {
+		opacity: 1;
+		transform: translateY(50%) rotate(-90deg);
 	}
 }

@@ -1,24 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { ReactComponent as Logo } from "../assets/svg/logo.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
+  const [currentSubMenu, setCurrentSubMenu] = useState(null);
+  const closeTimeoutRef = useRef(null);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     setCurrentSubMenu(null); // Закрыть подменю при открытии/закрытии основного меню
-  };
-
-  const toggleSubMenu = (menuName) => {
-    setOpenMenu(openMenu === menuName ? null : menuName);
   };
 
   const handleLinkClick = () => {
     setOpenMenu(null);
     setCurrentSubMenu(null);
   };
-
-  const [currentSubMenu, setCurrentSubMenu] = useState(null);
 
   const openSubMenu = (menuName) => {
     setCurrentSubMenu(menuName);
@@ -28,28 +25,40 @@ const Header = () => {
     setCurrentSubMenu(null);
   };
 
+  const handleMouseEnter = (menuName) => {
+    clearTimeout(closeTimeoutRef.current);
+    setOpenMenu(menuName);
+  };
+
+  const handleMouseLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setOpenMenu(null);
+    }, 500);
+  };
+
   return (
     <header className="bg-black text-white relative z-50">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo Section */}
         <div className="flex items-center space-x-3 text-center">
-          <Logo />
+         <a href="/"> <Logo /> </a>
           <span className="text-xl font-bold hidden lg:block">
-            Matthew Matthews Brand
+            <a href="/">Matthew Matthews Brand</a>
           </span>
         </div>
 
         {/* Navigation Links for Desktop */}
-        <nav className="hidden md:flex space-x-8 text-sm font-medium relative">
+        <nav className="hidden md:flex space-x-8 text-sm font-bold relative">
           {/* Replic Public Menu */}
-          <div className="relative">
+          <div
+            className="relative"
+            onMouseEnter={() => handleMouseEnter("replic")}
+            onMouseLeave={handleMouseLeave}
+          >
             <a
               href="/"
-              onClick={(e) => {
-                e.preventDefault();
-                toggleSubMenu("replic");
-              }}
-              className="hover:text-gray-400 cursor-pointer flex items-center space-x-1"
+              onClick={(e) => e.preventDefault()}
+              className="cursor-pointer flex items-center space-x-1 hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
             >
               <span>Replic Public</span>
               <svg
@@ -70,32 +79,36 @@ const Header = () => {
               </svg>
             </a>
             {openMenu === "replic" && (
-              <div className="absolute top-full left-0 bg-black text-sm mt-2 shadow-md border border-gray-700 z-50">
+              <div
+                className="absolute top-[42px] left-0 bg-black text-sm mt-2 shadow-md border border-gray-700 z-50 pt-4"
+                onMouseEnter={() => handleMouseEnter("replic")}
+                onMouseLeave={handleMouseLeave}
+              >
                 <a
-                  href="/"
+                  href="/product"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:text-gray-400"
+                  className="block px-4 py-2 hover:underline hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
                 >
                   Solo Studio Pro
                 </a>
                 <a
-                  href="/"
+                  href="/product"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:text-gray-400"
+                  className="block px-4 py-2 hover:underline hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
                 >
                   Solo Studio Mini
                 </a>
                 <a
-                  href="/"
+                  href="/product"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:text-gray-400"
+                  className="block px-4 py-2 hover:underline hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
                 >
                   VALVEX AMP
                 </a>
                 <a
-                  href="/"
+                  href="/product"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:text-gray-400"
+                  className="block px-4 py-2 hover:underline hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
                 >
                   OldChannel
                 </a>
@@ -104,14 +117,15 @@ const Header = () => {
           </div>
 
           {/* Music Production Menu */}
-          <div className="relative">
+          <div
+            className="relative"
+            onMouseEnter={() => handleMouseEnter("music")}
+            onMouseLeave={handleMouseLeave}
+          >
             <a
               href="/"
-              onClick={(e) => {
-                e.preventDefault();
-                toggleSubMenu("music");
-              }}
-              className="hover:text-gray-400 cursor-pointer flex items-center space-x-1"
+              onClick={(e) => e.preventDefault()}
+              className="cursor-pointer flex items-center space-x-1 hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)] "
             >
               <span>Music Production</span>
               <svg
@@ -132,25 +146,29 @@ const Header = () => {
               </svg>
             </a>
             {openMenu === "music" && (
-              <div className="absolute top-full left-0 bg-black text-sm mt-2 shadow-md border border-gray-700 z-50">
+              <div
+                className="absolute top-[42px] left-0 bg-black text-sm mt-2 shadow-md border border-gray-700 z-50 pt-4"
+                onMouseEnter={() => handleMouseEnter("music")}
+                onMouseLeave={handleMouseLeave}
+              >
                 <a
                   href="/"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:text-gray-400"
+                  className="block px-4 py-2 hover:underline hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
                 >
                   Mixing & Mastering
                 </a>
                 <a
                   href="/"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:text-gray-400"
+                  className="block px-4 py-2 hover:underline hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
                 >
                   Online Artist
                 </a>
                 <a
-                  href="/"
+                  href="/distribution"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:text-gray-400"
+                  className="block px-4 py-2 hover:underline hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
                 >
                   Distribution
                 </a>
@@ -158,27 +176,31 @@ const Header = () => {
             )}
           </div>
 
-          <a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
+          <a
+            href="/"
+            onClick={handleLinkClick}
+            className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+          >
             World Net States
           </a>
           <a
             href="/history"
             onClick={handleLinkClick}
-            className="hover:text-gray-400"
+            className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
           >
             Магазин
           </a>
           <a
-            href="/about"
+            href="/history"
             onClick={handleLinkClick}
-            className="hover:text-gray-400"
+            className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
           >
             О нас
           </a>
           <a
-            href="/product"
+            href="/about"
             onClick={handleLinkClick}
-            className="hover:text-gray-400"
+            className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
           >
             Контакты
           </a>
@@ -213,33 +235,8 @@ const Header = () => {
           </svg>
         </button>
       </div>
-      {/* Dropdown Menu for Mobile */}
-      {/* {isOpen && (
-        <div className="md:hidden bg-black text-white px-6 py-4">
-          <nav className="flex flex-col space-y-4">
-            <a href="/" className="hover:text-gray-400">
-              Replic Public
-            </a>
-            <a href="/" className="hover:text-gray-400">
-              Music Production
-            </a>
-            <a href="/" className="hover:text-gray-400">
-            World Net States
-            </a>
-            <a href="/" className="hover:text-gray-400">
-            Магазин
-            </a>
-            <a href="/about" className="hover:text-gray-400">
-            О нас
-            </a>
-            <a href="/" className="hover:text-gray-400">
-            Контакты
-            </a>
-          </nav>
-        </div>
-      )} */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black text-white h-screen flex flex-col">
+        <div className="fixed inset-0 bg-black text-white h-screen flex flex-col transition-all duration-300 ease-in-out">
           {/* Фиксированный хедер с логотипом и кнопкой закрытия */}
           <div className="flex justify-between items-center px-6 py-4">
             {/* Логотип */}
@@ -247,7 +244,7 @@ const Header = () => {
             {/* Кнопка закрытия */}
             <button
               onClick={() => setIsOpen(false)}
-              className="hover:text-gray-400"
+              className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -272,7 +269,7 @@ const Header = () => {
               <nav className="flex flex-col items-end space-y-4">
                 <button
                   onClick={() => openSubMenu("replic")}
-                  className="flex justify-end items-center hover:text-gray-400"
+                  className="flex justify-end items-center hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
                 >
                   <span>Replic Public</span>
                   <svg
@@ -292,7 +289,7 @@ const Header = () => {
                 </button>
                 <button
                   onClick={() => openSubMenu("music")}
-                  className="flex justify-end items-center hover:text-gray-400"
+                  className="flex justify-end items-center hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
                 >
                   <span>Music Production</span>
                   <svg
@@ -310,16 +307,28 @@ const Header = () => {
                     />
                   </svg>
                 </button>
-                <a href="/" className="hover:text-gray-400">
+                <a
+                  href="/"
+                  className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+                >
                   World Net States
                 </a>
-                <a href="/history" className="hover:text-gray-400">
+                <a
+                  href="/"
+                  className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+                >
                   Магазин
                 </a>
-                <a href="/about" className="hover:text-gray-400">
+                <a
+                  href="/history"
+                  className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+                >
                   О нас
                 </a>
-                <a href="/product" className="hover:text-gray-400">
+                <a
+                  href="/about"
+                  className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+                >
                   Контакты
                 </a>
               </nav>
@@ -327,7 +336,7 @@ const Header = () => {
               <div>
                 <button
                   onClick={goBack}
-                  className="flex items-center space-x-2 mb-4 hover:text-gray-400"
+                  className="flex items-center space-x-2 mb-4 hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -346,29 +355,50 @@ const Header = () => {
                 </button>
                 {currentSubMenu === "replic" && (
                   <nav className="flex flex-col items-end space-y-4">
-                    <a href="/" className="hover:text-gray-400">
+                    <a
+                      href="/product"
+                      className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+                    >
                       Solo Studio Pro
                     </a>
-                    <a href="/" className="hover:text-gray-400">
+                    <a
+                      href="/product"
+                      className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+                    >
                       Solo Studio Mini
                     </a>
-                    <a href="/" className="hover:text-gray-400">
+                    <a
+                      href="/product"
+                      className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+                    >
                       VALVEX AMP
                     </a>
-                    <a href="/" className="hover:text-gray-400">
+                    <a
+                      href="/product"
+                      className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+                    >
                       OldChannel
                     </a>
                   </nav>
                 )}
                 {currentSubMenu === "music" && (
                   <nav className="flex flex-col items-end space-y-4">
-                    <a href="/" className="hover:text-gray-400">
+                    <a
+                      href="/"
+                      className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+                    >
                       Mixing & Mastering
                     </a>
-                    <a href="/" className="hover:text-gray-400">
+                    <a
+                      href="/"
+                      className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+                    >
                       Online Artist
                     </a>
-                    <a href="/" className="hover:text-gray-400">
+                    <a
+                      href="/distribution"
+                      className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+                    >
                       Distribution
                     </a>
                   </nav>
@@ -383,3 +413,4 @@ const Header = () => {
 };
 
 export default Header;
+

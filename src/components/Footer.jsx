@@ -3,36 +3,26 @@ import { ReactComponent as Logo } from "../assets/svg/logo.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white">
-      <div className="container mx-auto px-6 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-black text-white relative">
+      <div className="container mx-auto px-6 py-10 flex justify-between">
+        <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
           {/* Website Pages */}
           <div>
-            <h3 className="text-lg font-bold mb-4">WEBSITE PAGES</h3>
+            <h3 className="text-lg font-bold mb-4">PRODUCTION</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:text-gray-400">
-                  Music Distribution
+                  Mix and Master
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-gray-400">
-                  About Us
+                  Online Artist
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-gray-400">
-                  Account
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-400">
-                  History
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-400">
-                  Contact
+                  Distribution
                 </a>
               </li>
             </ul>
@@ -44,22 +34,22 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:text-gray-400">
-                  DeskDAW
+                  SoloStudio Pro
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-gray-400">
-                  HybridConsole
+                  SoloStudio Mini
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-gray-400">
-                  ValveX
+                  VALVEX AMP
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-gray-400">
-                  TapeX
+                  OldChannel
                 </a>
               </li>
             </ul>
@@ -71,35 +61,67 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:text-gray-400">
-                  DeskDAW Community
+                  Store
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-gray-400">
-                  Replic Public Community
+                  WNS
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-gray-400">
-                  Online Artist Access
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-400">
+                  Contact
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Branding and Copyright */}
-          <div className="flex flex-col items-start md:items-end space-y-4">
-            <div className="flex items-center space-x-3">
-              <Logo />
-              <div>
-                <h3 className="text-lg font-bold">Matthew Matthews Brand</h3>
-                <p className="text-sm">Create your vision with music and be happy!</p>
-              </div>
-            </div>
-            <p className="text-xs text-gray-500">
-              Copyright © 2025 Matthew Matthews Brand. All Rights Reserved.
-            </p>
+
+          
+
+           {/* COMMERCIAL */}
+           <div>
+            <h3 className="text-lg font-bold mb-4">COMMERCIAL</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#" className="hover:text-gray-400">
+                Политика приватности
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-400">
+                Юридическая Информация
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-400">
+                О кампании
+                </a>
+              </li>
+            </ul>
           </div>
+        </div>
+
+        {/* Branding and Copyright */}
+        <div className="flex flex-col items-start md:items-end space-y-4 relative">
+          <div className="flex items-center space-x-3">
+            <Logo />
+            <div>
+              <h3 className="text-lg font-bold">Matthew Matthews Brand</h3>
+              <p className="text-sm">
+                Create your vision with music and be happy!
+              </p>
+            </div>
+          </div>
+          <p className="text-xs text-gray-500 absolute bottom-0 right-0 w-full text-right p-0 whitespace-nowrap">
+            Copyright © 2025 Matthew Matthews Brand. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
@@ -107,5 +129,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-

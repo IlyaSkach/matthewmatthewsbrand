@@ -2,5 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply font-sans;
+  font-family: Arial, sans-serif;
+}
 
-
+.azeret-mono {
+  font-family: 'Azeret Mono', monospace;
+}

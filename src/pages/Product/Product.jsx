@@ -32,7 +32,6 @@ const Product = () => {
         <div className={styles.splitSection__content}>
           <h2>What’s new?</h2>
           <p>
-            {" "}
             Ever since its joke txt created his famous early console modules in
             the early 1970s, many other companies have attempted to reproduce
             elements of their classic sound – or even clone them entirely. But

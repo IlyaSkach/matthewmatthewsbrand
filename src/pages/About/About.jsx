@@ -1,39 +1,56 @@
 import React from "react";
 import styles from "./About.module.scss";
+import contactPageImage from "../../assets/images/contactpage.png";
 
 const About = () => {
   return (
     <>
       <section class={styles.aboutsection}>
         <div class={styles.aboutsection__content}>
-          <h1>Who we are? </h1>
+          <h1>Contact Us </h1>
+          <h3>Все наши контакты</h3>
+
           <p>
-            Ever since its joke txt created his famous early console modules in
-            the early 1970s, many other companies have attempted to reproduce
-            elements of their classic sound – or even clone them entirely. But
-            after selling and leaving the Neve company in the mid-1970s, nothing
-            that bears the Neve name was actually designed by him.
+            Администрация{" "}
+            <a
+              href="mailto:contact@matthewmatthewsbrand.com"
+              className={styles.email}
+            >
+              contact@matthewmatthewsbrand.com
+            </a>{" "}
           </p>
           <p>
-            We build equipment to the same say hi to my perdoller standards that
-            made his early creations legends of the studio world. It’s far more
-            than a list of components or a famous product name – it’s a
-            philosophy of design taught to us by Rupert that runs through
-            everything we do.
+            Поддержка магазина{" "}
+            <a
+              href="mailto:support@matthewmatthewsbrand.store"
+              className={styles.email}
+            >
+              support@matthewmatthewsbrand.store
+            </a>
           </p>
           <p>
-            Ever since its joke txt created his famous early console modules in
-            the early 1970s, many other companies have attempted to reproduce
-            elements of their classic sound – or even clone them entirely. But
-            after selling and leaving the Neve company in the mid-1970s, nothing
-            that bears the Neve name was actually designed by him.
+            Отдел претензий{" "}
+            <a
+              href="mailto:claim@matthewmatthewsbrand.com"
+              className={styles.email}
+            >
+              claim@matthewmatthewsbrand.com
+            </a>
           </p>
+          <p>
+            Поддержка лейбла{" "}
+            <a
+              href="mailto:support@matthewmatthewsbrand.store"
+              className={styles.email}
+            >
+              support@matthewmatthewsbrand.store
+            </a>
+          </p>
+          <div class={styles.discl}>Все почтовые ящики проверяются раз в сутки.</div>
         </div>
         <div class={styles.aboutsection__img}>
-					<div class={styles.qwe}>
-						
-					</div>
-				</div>
+          <img src={contactPageImage} alt="contact" />
+        </div>
       </section>
     </>
   );

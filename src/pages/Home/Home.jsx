@@ -8,8 +8,8 @@ const Home = () => {
       <Slider />
       <section class={styles.herosection}>
         <div class={styles.herocontent}>
-          <h1>My best ideas brought to life are now available to the world.</h1>
-          <p>Matthew Matthews, CEO and Sound Engineer</p>
+          <div class={styles.herocontent__title}>My best ideas brought to life are now available to the world.</div>
+          <div class={styles.herocontent__description}>Matthew Matthews, CEO and Sound Engineer</div>
         </div>
       </section>
       <section class={styles.aboutsection}>
