@@ -1,5 +1,6 @@
 import React from "react";
-import  LogoFooter  from "../assets/images/footerlogo.png";
+import LogoFooter from "../assets/images/footer.png";
+import { ReactComponent as Logo } from "../assets/svg/logo.svg";
 
 const Footer = () => {
   return (
@@ -82,26 +83,23 @@ const Footer = () => {
             </ul>
           </div>
 
-
-          
-
-           {/* COMMERCIAL */}
-           <div>
+          {/* COMMERCIAL */}
+          <div>
             <h3 className="text-lg font-bold mb-4">COMMERCIAL</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:underline">
-                Политика приватности
+                  Политика приватности
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:underline">
-                Юридическая Информация
+                  Юридическая Информация
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:underline">
-                О кампании
+                  О кампании
                 </a>
               </li>
             </ul>
@@ -111,7 +109,8 @@ const Footer = () => {
         {/* Branding and Copyright */}
         <div className="flex flex-col items-center justify-center space-y-4 relative mt-8 md:mt-0">
           <div className="flex items-center space-x-3">
-          <img src={LogoFooter} alt="Logo" />  
+            {/* <img src={LogoFooter} alt="Logo" /> */}
+            <Logo />
             <div>
               <h3 className="text-xl font-bold">Matthew Matthews Brand</h3>
               <p className="text-base">
@@ -121,8 +120,8 @@ const Footer = () => {
           </div>
         </div>
         <p className="text-xs text-gray-500 absolute bottom-0 right-0 w-full text-right p-0 whitespace-nowrap">
-            Copyright © 2025 Matthew Matthews Brand. All Rights Reserved.
-          </p>
+          Copyright © 2025 Matthew Matthews Brand. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

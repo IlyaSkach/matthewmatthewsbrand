@@ -83,7 +83,7 @@ const Header = () => {
             </a>
             {openMenu === "replic" && (
               <div
-                className={`absolute top-[50px] left-0 bg-black text-sm shadow-md border border-gray-700 z-50 fade-in`}
+                className={`absolute top-[50px] left-0 bg-black text-sm shadow-md border border-none z-50 fade-in`}
                 onMouseEnter={() => handleMouseEnter("replic")}
                 onMouseLeave={handleMouseLeave}
               >
@@ -154,7 +154,7 @@ const Header = () => {
             </a>
             {openMenu === "music" && (
               <div
-                className="absolute top-[50px] left-0 bg-black text-sm  shadow-md border border-gray-700 z-50 fade-in"
+                className="absolute top-[50px] left-0 bg-black text-sm  shadow-md border border-none z-50 fade-in"
                 onMouseEnter={() => handleMouseEnter("music")}
                 onMouseLeave={handleMouseLeave}
               >
