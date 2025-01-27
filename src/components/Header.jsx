@@ -40,7 +40,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-black text-white relative z-50">
+    <header className="bg-black text-white fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo Section */}
         <div className="flex items-center space-x-3 text-center">
@@ -61,7 +61,7 @@ const Header = () => {
             <a
               href="/"
               onClick={(e) => e.preventDefault()}
-              className="cursor-pointer flex items-center space-x-1 hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+              className="cursor-pointer flex items-center space-x-1 "
             >
               <span>Replic Public</span>
               <svg
@@ -83,7 +83,7 @@ const Header = () => {
             </a>
             {openMenu === "replic" && (
               <div
-                className={`absolute top-[42px] left-0 bg-black text-sm mt-2 shadow-md border border-gray-700 z-50 pt-4 fade-in`}
+                className={`absolute top-[50px] left-0 bg-black text-sm shadow-md border border-gray-700 z-50 fade-in`}
                 onMouseEnter={() => handleMouseEnter("replic")}
                 onMouseLeave={handleMouseLeave}
               >
@@ -132,7 +132,7 @@ const Header = () => {
             <a
               href="/"
               onClick={(e) => e.preventDefault()}
-              className="cursor-pointer flex items-center space-x-1 hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)] "
+              className="cursor-pointer flex items-center space-x-1 "
             >
               <span>Music Production</span>
               <svg
@@ -154,7 +154,7 @@ const Header = () => {
             </a>
             {openMenu === "music" && (
               <div
-                className="absolute top-[42px] left-0 bg-black text-sm mt-2 shadow-md border border-gray-700 z-50 pt-4 fade-in"
+                className="absolute top-[50px] left-0 bg-black text-sm  shadow-md border border-gray-700 z-50 fade-in"
                 onMouseEnter={() => handleMouseEnter("music")}
                 onMouseLeave={handleMouseLeave}
               >
@@ -189,28 +189,28 @@ const Header = () => {
           <a
             href="/"
             onClick={handleLinkClick}
-            className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+            className=""
           >
             World Net States
           </a>
           <a
             href="/history"
             onClick={handleLinkClick}
-            className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+            className=""
           >
             Магазин
           </a>
           <a
             href="/history"
             onClick={handleLinkClick}
-            className="hover:shadow-[0_0_10px_0_rgba(255,255,255,0.5)]"
+            className=""
           >
             О нас
           </a>
           <a
             href="/about"
             onClick={handleLinkClick}
-            className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+            className=""
           >
             Контакты
           </a>

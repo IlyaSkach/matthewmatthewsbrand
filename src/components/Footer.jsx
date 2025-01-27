@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Logo } from "../assets/svg/logo.svg";
+import  LogoFooter  from "../assets/images/footerlogo.png";
 
 const Footer = () => {
   return (
@@ -111,10 +111,10 @@ const Footer = () => {
         {/* Branding and Copyright */}
         <div className="flex flex-col items-center justify-center space-y-4 relative mt-8 md:mt-0">
           <div className="flex items-center space-x-3">
-            <Logo />
+          <img src={LogoFooter} alt="Logo" />  
             <div>
-              <h3 className="text-lg font-bold">Matthew Matthews Brand</h3>
-              <p className="text-sm">
+              <h3 className="text-xl font-bold">Matthew Matthews Brand</h3>
+              <p className="text-base">
                 Create your vision with music and be happy!
               </p>
             </div>
