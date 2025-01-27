@@ -86,9 +86,6 @@
 		display: inline-block;
 	}
 
-	:hover {
-		box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Увеличенный box-shadow */
-	}
 
 	.link:not(:last-child)::after {
 		content: "/";
@@ -114,11 +111,11 @@
 		letter-spacing: 0%;
 		text-align: left;
 		padding: 9px 91px;
-		button:hover {
-			box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Увеличенный box-shadow */
-			transform: scale(1.05); /* Небольшой эффект увеличения */
-			transition: box-shadow 0.3s ease, transform 0.3s ease; /* Плавные переходы */
-		}
+	}
+	.btn:hover {
+		box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Увеличенный box-shadow */
+		transform: scale(1.05); /* Небольшой эффект увеличения */
+		transition: box-shadow 0.3s ease, transform 0.3s ease; /* Плавные переходы */
 	}
 }
 

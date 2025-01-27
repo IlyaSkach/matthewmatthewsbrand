@@ -13,16 +13,16 @@ const Distribution = () => {
       </section>
       <section className={styles.linksection}>
         <nav className={styles.navigation}>
-          <a href="/" className={styles.link}>
+          <a href="#features" className={styles.link}>
             FEATURES
           </a>
-          <a href="/" className={styles.link}>
+          <a href="#song" className={styles.link}>
             REALEASED SONGS
           </a>
         </nav>
         <button className={styles.btn}>GET UNLIMITED ACCESS</button>
       </section>
-      <section className={styles.splitSection}>
+      <section className={styles.splitSection} id="features" >
         <div className={styles.splitSection__image}>
           <img src={secondPageImage} alt="second page img" />
         </div>
@@ -54,7 +54,7 @@ const Distribution = () => {
           <button className={styles.btnblack}>GET UNLIMITED ACCESS</button>
         </div>
       </section>
-      <section class={styles.musicSection}>
+      <section class={styles.musicSection} id="song">
         <h2>Our Music and Artists</h2>
         <div class={styles.musicSection__parts}>
           <div class={styles.musicSection__parts_song}>

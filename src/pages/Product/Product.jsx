@@ -9,23 +9,21 @@ const Product = () => {
         <h1>TEMPLATE PRODUCT</h1>
         <p>Short description of product</p>
       </section>
-			<section className={styles.linksection}>
-			<nav className={styles.navigation}>  
-				 <a href="/"  className={styles.link}>
-				 OVERVIEW 
-				 </a>
-				 <a href="/about" className={styles.link}>
-				 FEATURES
-				 </a>
-				 <a href="/product" className={styles.link}>
-				 COMMUNITY 
-				 </a>
-			 </nav>
-			 <button className={styles.btn}>
-			 BUY IT NOW
-			 </button>
-			</section>
-      <section className={styles.splitSection}>
+      <section className={styles.linksection}>
+        <nav className={styles.navigation}>
+          <a href="#overview" className={styles.link}>
+            OVERVIEW
+          </a>
+          <a href="#features" className={styles.link}>
+            FEATURES
+          </a>
+          <a href="#community" className={styles.link}>
+            COMMUNITY
+          </a>
+        </nav>
+        <button className={styles.btn}>BUY IT NOW</button>
+      </section>
+      <section className={styles.splitSection} id="overview">
         <div className={styles.splitSection__image}>
           <img src={secondPageImage} alt="second page img" />
         </div>
@@ -56,7 +54,7 @@ const Product = () => {
           </p>
         </div>
       </section>
-			<section className={styles.splitreturnSection}>
+      <section className={styles.splitreturnSection} id="features">
         <div className={styles.splitreturnSection__image}>
           <img src={secondPageImage} alt="second page img" />
         </div>
@@ -87,9 +85,11 @@ const Product = () => {
           </p>
         </div>
       </section>
-			<section className={styles.splityoutubeSection}>
+      <section className={styles.splityoutubeSection} id="community">
         <div className={styles.splityoutubeSection__image}>
-          <img src={secondPageImage} alt="second page img" />
+          <button>
+            <img src={secondPageImage} alt="second page img" />{" "}
+          </button>
         </div>
         <div className={styles.splityoutubeSection__content}>
           <h2>See big review on YouTube</h2>
@@ -113,8 +113,6 @@ const Product = () => {
             Ever since its joke txt created his famous early console modules in
             the early 1970s, many other companies have attempted to reproduce
           </p>
-
-					
         </div>
       </section>
     </>
