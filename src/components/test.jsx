@@ -1,115 +1,131 @@
-
-
-import React, { useState } from "react";
+import React from "react";
 import { ReactComponent as Logo } from "../assets/svg/logo.svg";
+import "./Footer.scss"; // Импортируем файл стилей
 
-const Header = () => {
-	const [isOpen, setIsOpen] = useState(false);
+const Footer = () => {
+  return (
+    <footer className="bg-black text-white relative">
+      <div className="container mx-auto px-6 py-10 footer-container">
+        <div className="footer-row">
+          {/* Website Pages */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">PRODUCTION</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#" className="hover:underline">
+                  Mix and Master
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Online Artist
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Distribution
+                </a>
+              </li>
+            </ul>
 
-	const toggleMenu = () => {
-		setIsOpen(!isOpen);
-	};
+            {/* Hardware */}
+            <div>
+              <h3 className="text-lg font-bold mb-4">HARDWARE</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a href="#" className="hover:underline">
+                    SoloStudio Pro
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    SoloStudio Mini
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    VALVEX AMP
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    OldChannel
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
+        <div className="footer-row">
+          {/* Useful Links */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">USEFUL LINKS</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#" className="hover:underline">
+                  Store
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  WNS
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
 
-	const handleLinkClick = () => {
-		setIsOpen(false);
-	};
-	
+          {/* COMMERCIAL */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">COMMERCIAL</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#" className="hover:underline">
+                  Политика приватности
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Юридическая Информация
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  О кампании
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-	return (
-		<header className="bg-black text-white">
-			<div className="container mx-auto flex items-center justify-between py-4 px-6">
-				{/* Logo Section */}
-				<div className="flex items-center space-x-3 text-center">
-					<Logo />
-					<span className="text-xl font-bold">Matthew Matthews Brand</span>
-				</div>
-
-				{/* Navigation Links for Desktop */}
-				<nav className="hidden md:flex space-x-8 text-sm font-medium">
-				 
-					<a href="/product" onClick={handleLinkClick} className="hover:text-gray-400">
-					Replic Public
-					</a>
-					<a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
-					Music Production
-					</a>
-					<a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
-					World Net States
-					</a>
-					<a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
-					Магазин
-					</a>
-					<a href="/about" onClick={handleLinkClick} className="hover:text-gray-400">
-					О нас
-					</a>
-					<a href="/" onClick={handleLinkClick} className="hover:text-gray-400">
-					Контакты
-					</a>
-				</nav>
-
-				
-
-				{/* Hamburger Menu Button for Mobile */}
-				<button
-					className="block md:hidden text-white focus:outline-none"
-					onClick={toggleMenu}
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						className="h-6 w-6"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						strokeWidth={2}
-					>
-						{isOpen ? (
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								d="M6 18L18 6M6 6l12 12"
-							/>
-						) : (
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								d="M4 6h16M4 12h16M4 18h16"
-							/>
-						)}
-					</svg>
-				</button>
-			</div>
-
-			{/* Dropdown Menu for Mobile */}
-			{isOpen && (
-				<div className="md:hidden bg-black text-white px-6 py-4">
-					<nav className="flex flex-col space-y-4">
-						<a href="/" className="hover:text-gray-400">
-							Replic Public
-						</a>
-						<a href="/" className="hover:text-gray-400">
-							United Virtual State
-						</a>
-						<a href="/" className="hover:text-gray-400">
-							Music Distribution
-						</a>
-						<a href="/" className="hover:text-gray-400">
-							History
-						</a>
-						<a href="/about" className="hover:text-gray-400">
-							About Us
-						</a>
-						<a href="/" className="hover:text-gray-400">
-							Account
-						</a>
-						<a href="/" className="hover:text-gray-400">
-							Contact
-						</a>
-					</nav>
-				</div>
-			)}
-		</header>
-	);
+        {/* Branding and Copyright */}
+        <div className="flex flex-col items-center justify-center space-y-4 relative mt-8 md:mt-0 footer-logo">
+          <div className="flex items-center space-x-3">
+            <Logo />
+            <div>
+              <h3 className="text-xl font-bold">Matthew Matthews Brand</h3>
+              <p className="text-base">
+                Create your vision with music and be happy!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p className="text-xs text-gray-500 absolute bottom-0 right-0 w-full text-right p-0 whitespace-nowrap">
+        Copyright © 2025 Matthew Matthews Brand. All Rights Reserved.
+      </p>
+    </footer>
+  );
 };
 
-export default Header;
+export default Footer;

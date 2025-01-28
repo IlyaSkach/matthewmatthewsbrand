@@ -91,7 +91,7 @@ const Header = () => {
                   href="/product"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-                  style={{ paddingLeft: '5px' }}
+                 
                 >
                   Solo Studio Pro
                 </a>
@@ -99,7 +99,7 @@ const Header = () => {
                   href="/product"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-                  style={{ paddingLeft: '5px' }}
+               
                 >
                   Solo Studio Mini
                 </a>
@@ -107,7 +107,7 @@ const Header = () => {
                   href="/product"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-                  style={{ paddingLeft: '5px' }}
+              
                 >
                   VALVEX AMP
                 </a>
@@ -115,7 +115,7 @@ const Header = () => {
                   href="/product"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-                  style={{ paddingLeft: '5px' }}
+              
                 >
                   OldChannel
                 </a>
@@ -162,7 +162,7 @@ const Header = () => {
                   href="/"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-                  style={{ paddingLeft: '5px' }}
+                
                 >
                   Mixing & Mastering
                 </a>
@@ -170,7 +170,7 @@ const Header = () => {
                   href="/"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-                  style={{ paddingLeft: '5px' }}
+                
                 >
                   Online Artist
                 </a>
@@ -178,7 +178,7 @@ const Header = () => {
                   href="/distribution"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-                  style={{ paddingLeft: '5px' }}
+               
                 >
                   Distribution
                 </a>

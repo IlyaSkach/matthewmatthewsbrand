@@ -20,21 +20,21 @@ const Slider = () => {
       >
         <SwiperSlide>
           <div className="h-full flex items-end justify-start bg-gray-400">
-            <h2 className="text-white text-3xl font-bold underline uppercase absolute bottom-[110px] left-[170px]">
+            <h2 className="text-white text-3xl font-bold underline uppercase absolute bottom-[110px] left-[170px] mobile">
               Announcing New Matthew Matthews Brand Rentals
             </h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="h-full flex items-end justify-start bg-gray-500">
-            <h2 className="text-white text-3xl font-bold underline uppercase absolute bottom-[110px] left-[170px]">
+            <h2 className="text-white text-3xl font-bold underline uppercase absolute bottom-[110px] left-[170px] mobile">
               Another Great Feature!
             </h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="h-full flex items-end justify-start bg-gray-600">
-            <h2 className="text-white text-3xl font-bold underline uppercase absolute bottom-[110px] left-[170px]">
+            <h2 className="text-white text-3xl font-bold underline uppercase absolute bottom-[110px] left-[170px] mobile">
               Check This Out!
             </h2>
           </div>

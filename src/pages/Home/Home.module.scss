@@ -1,7 +1,6 @@
 .herosection {
   position: relative;
   width: 100%;
-
   background: url("../../assets/images/homepage.png") no-repeat center center; // Замените на путь к вашему изображению
   background-size: cover;
   display: flex;
@@ -20,6 +19,13 @@
     height: 100%;
     // background: rgba(0, 0, 0, 0.5); // Затемнение
     z-index: 1;
+  }
+
+  @media (max-width: 767px) {
+    background: url("../../assets/images/mobilehome.png") no-repeat center center; // Замените на путь к вашему изображению
+    background-size: cover;
+    background-position: top center; // Убедитесь, что изображение сдвигается вверх и выглядит лучше
+    padding: 10px;
   }
 
   .herocontent {
@@ -64,6 +70,7 @@
     }
   }
 }
+
 
 .aboutsection {
   background-color: #b0b0b0;

@@ -5,6 +5,7 @@ import historyPageImage from "../../assets/images/historypage.png";
 import DistributionPageImage from "../../assets/images/distpage.png";
 
 const Distribution = () => {
+  
   return (
     <>
       <section className={styles.titlesection}>

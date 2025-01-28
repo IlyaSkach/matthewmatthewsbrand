@@ -12,3 +12,58 @@
 .fade-in {
   animation: fadeIn 1s ease-in-out forwards;
 }
+
+.footer-row {
+	display: none;
+
+}
+
+// .footer-container {
+//   display: flex;
+//   flex-direction: column;
+
+//   @media (min-width: 768px) {
+//     flex-direction: row;
+//     justify-content: space-between;
+//   }
+// }
+
+@media (max-width: 768px) {
+	.footer-desc {
+		display: none;
+	}
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+  }
+	.footer-cop {
+		display: flex;
+		justify-content: space-around;
+	}
+
+  .footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+		gap: 50px;
+
+		
+		
+  }
+
+	.first {
+		gap: 60px;
+	}
+
+  .footer-logo {
+    margin-top: 1rem;
+  }
+}
+
+
+
+
+

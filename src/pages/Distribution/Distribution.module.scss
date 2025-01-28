@@ -22,6 +22,13 @@
 		z-index: 1;
 	}
 
+	@media (max-width: 767px) {
+		background: url("../../assets/images/mobileprod.png") no-repeat center center; // Замените на путь к вашему изображению
+		background-size: cover;
+		background-position: top center; // Убедитесь, что изображение сдвигается вверх и выглядит лучше
+		padding: 100px 10px 20px 10px;
+	}
+
 	h1 {
 		color: #fff;
 		font-family: Arial;
@@ -32,8 +39,10 @@
 		text-align: left;
 
 		// Адаптивность заголовка
-		@media (min-width: 768px) {
-			font-size: 2rem;
+		@media (max-width: 768px) {
+			font-size: 36px;
+			line-height: 36px;
+			padding-top: 110px;
 		}
 
 		@media (min-width: 1024px) {
@@ -51,8 +60,9 @@
 		text-align: left;
 
 		// Адаптивность текста
-		@media (min-width: 768px) {
-			font-size: 1rem;
+		@media (max-width: 768px) {
+			font-size: 20px;
+			line-height: 20px;
 		}
 
 		@media (min-width: 1024px) {
@@ -67,6 +77,10 @@
 	padding: 33px 0;
 	align-items: center;
 	justify-content: space-around;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 
 	.navigation {
 		display: flex;
@@ -85,7 +99,6 @@
 		position: relative;
 		display: inline-block;
 	}
-
 
 	.link:not(:last-child)::after {
 		content: "/";
@@ -111,11 +124,17 @@
 		letter-spacing: 0%;
 		text-align: left;
 		padding: 9px 91px;
+
+		@media (max-width: 768px) {
+			margin-top: 15px;
+		}
 	}
 	.btn:hover {
 		box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Увеличенный box-shadow */
 		transform: scale(1.05); /* Небольшой эффект увеличения */
-		transition: box-shadow 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+		transition:
+			box-shadow 0.3s ease,
+			transform 0.3s ease; /* Плавные переходы */
 	}
 }
 
@@ -169,8 +188,10 @@
 		background: rgb(0, 0, 0);
 		&:hover {
 			box-shadow: 0 0 20px black; /* Увеличенный box-shadow */
-		
-			transition: box-shadow 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+
+			transition:
+				box-shadow 0.3s ease,
+				transform 0.3s ease; /* Плавные переходы */
 		}
 	}
 
@@ -213,6 +234,11 @@
 	background-color: #000000;
 	padding: 111px 60px 111px 80px;
 	border-bottom: 1px solid #fff;
+
+
+	@media (max-width: 768px) {
+		padding: 60px 10px;
+	}
 	h2 {
 		color: rgb(255, 255, 255);
 		font-family: Arial;
@@ -222,17 +248,27 @@
 		letter-spacing: 0%;
 		text-align: left;
 		margin-bottom: 25px;
+		@media (max-width: 768px) {
+			font-size: 30px;
+		}
 	}
 
 	&__parts {
 		display: flex;
 		gap: 140px;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
 		p {
 			color: #fff;
 			font-size: 20px;
 			font-weight: 700;
 			line-height: 23px;
 			margin-bottom: 30px;
+			@media (max-width: 768px) {
+				font-size: 17px;
+			}
 		}
 		&_song {
 			display: flex;
@@ -244,7 +280,8 @@
 		}
 		&_img {
 			display: flex;
-			
+			flex-wrap: wrap;
+			justify-content:space-around;
 			gap: 10px;
 		}
 	}
@@ -289,7 +326,7 @@
 
 	.textOverlay {
 		position: absolute;
-		
+
 		top: 0px;
 		right: 22px;
 		transform: translateY(50%) rotate(-90deg);
@@ -305,7 +342,6 @@
 		font-size: 40px;
 		font-weight: 700;
 		line-height: 46px;
-
 	}
 
 	&:hover .textOverlay {
@@ -313,3 +349,5 @@
 		transform: translateY(50%) rotate(-90deg);
 	}
 }
+
+
