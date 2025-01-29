@@ -1,7 +1,7 @@
 
 .splitSection, 
 .musicSection {
-  scroll-margin-top: 80px; /* Высота закрепленного хедера */
+  scroll-margin-top: 80px; 
 }
 
 .titlesection {
@@ -341,7 +341,7 @@
 .imageContainer {
   flex: 0 0 auto;
   scroll-snap-align: start;
-  margin-right: 16px; // Расстояние между изображениями
+  margin-right: 16px; 
   position: relative;
 
   .image {

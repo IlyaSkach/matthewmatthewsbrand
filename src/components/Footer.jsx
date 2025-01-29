@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as Logo } from "../assets/svg/logo.svg";
-import "./styles.scss"; // Импортируем файл стилей
+import "./styles.scss"; 
 
 const Footer = () => {
   return (
@@ -13,100 +13,96 @@ const Footer = () => {
               <h3 className="text-lg font-bold mb-4">PRODUCTION</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Mix and Master
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Online Artist
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Distribution
                   </a>
                 </li>
               </ul>
             </div>
           </div>
-
           {/* Hardware */}
           <div className="footer-desc">
             <h3 className="text-lg font-bold mb-4">HARDWARE</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   SoloStudio Pro
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   SoloStudio Mini
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   VALVEX AMP
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   OldChannel
                 </a>
               </li>
             </ul>
           </div>
-
           {/* Useful Links */}
           <div className="footer-desc">
             <h3 className="text-lg font-bold mb-4">USEFUL LINKS</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   Store
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   WNS
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   Contact
                 </a>
               </li>
             </ul>
           </div>
-
           {/* COMMERCIAL */}
           <div className="footer-desc">
             <h3 className="text-lg font-bold mb-4">COMMERCIAL</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   Политика приватности
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   Юридическая Информация
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   О кампании
                 </a>
               </li>
             </ul>
           </div>
-
           {/* Social Media */}
           <div className="footer-row first">
             {/* Website Pages */}
@@ -115,45 +111,44 @@ const Footer = () => {
                 <h3 className="text-lg font-bold mb-4">PRODUCTION</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <a href="#" className="hover:underline">
+                    <a href="/" className="hover:underline">
                       Mix and Master
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <a href="/" className="hover:underline">
                       Online Artist
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <a href="/" className="hover:underline">
                       Distribution
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-
             {/* Hardware */}
             <div>
               <h3 className="text-lg font-bold mb-4">HARDWARE</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     SoloStudio Pro
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     SoloStudio Mini
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     VALVEX AMP
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     OldChannel
                   </a>
                 </li>
@@ -166,44 +161,43 @@ const Footer = () => {
               <h3 className="text-lg font-bold mb-4">USEFUL LINKS</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Store
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     WNS
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Contact
                   </a>
                 </li>
               </ul>
             </div>
-
             {/* COMMERCIAL */}
             <div>
               <h3 className="text-lg font-bold mb-4">COMMERCIAL</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Политика приватности
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Юридическая Информация
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     О кампании
                   </a>
                 </li>

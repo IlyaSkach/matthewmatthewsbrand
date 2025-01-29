@@ -1,23 +1,16 @@
-.splitSection, 
+.splitSection,
 .splitreturnSection,
 .splityoutubeSection {
-  scroll-margin-top: 80px; /* Высота закрепленного хедера */
+	scroll-margin-top: 80px;
 }
-
 
 .titlesection {
 	position: relative;
 	width: 100%;
-
 	background: url("../../assets/images/secondpage.png") no-repeat center center; // Замените на путь к вашему изображению
 	background-size: cover;
-	// display: flex;
-	// align-items: center;
-	// justify-content: center;
-	// text-align: center;
 	padding: 190px 0 40px 80px;
 
-	// Полупрозрачный затемняющий слой
 	&::before {
 		content: "";
 		position: absolute;
@@ -25,16 +18,15 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		// background: rgba(0, 0, 0, 0.5); // Затемнение
 		z-index: 1;
 	}
 
 	@media (max-width: 767px) {
-    background: url("../../assets/images/mobileprod.png") no-repeat center center; // Замените на путь к вашему изображению
-    background-size: cover;
-    background-position: top center; // Убедитесь, что изображение сдвигается вверх и выглядит лучше
-    padding: 100px 10px 20px 10px;
-  }
+		background: url("../../assets/images/mobileprod.png") no-repeat center center; 
+		background-size: cover;
+		background-position: top center; 
+		padding: 100px 10px 20px 10px;
+	}
 
 	h1 {
 		color: #fff;
@@ -45,7 +37,6 @@
 		letter-spacing: 0%;
 		text-align: left;
 
-		// Адаптивность заголовка
 		@media (max-width: 768px) {
 			font-size: 36px;
 			line-height: 36px;
@@ -66,7 +57,6 @@
 		letter-spacing: 0%;
 		text-align: left;
 
-		// Адаптивность текста
 		@media (max-width: 768px) {
 			font-size: 20px;
 			line-height: 20px;
@@ -91,7 +81,7 @@
 
 	.navigation {
 		display: flex;
-		gap: 10px; /* Расстояние между ссылками */
+		gap: 10px; 
 	}
 	.link {
 		color: rgb(255, 255, 255);
@@ -115,25 +105,6 @@
 		}
 	}
 
-	
-
-	// .link:not(:last-child)::after {
-	// 	content: "/";
-	// 	margin-left: 8px; /* Отступ между ссылкой и символом */
-	// 	color: white; /* Цвет разделителя */
-	// 	text-decoration: none;
-	// 	display: inline;
-	// }
-
-	// .link:not(:last-child)::after {
-	// 	text-decoration: none; /* Гарантируем, что символ "/" не будет подчеркиваться */
-	// 	display: inline-block; /* Убираем влияние текста на оформление псевдоэлемента */
-	// }
-
-	// .link:last-child {
-	// 	text-decoration: none; /* Подчеркиваем только текст последней ссылки */
-	// }
-
 	.btn {
 		border-radius: 5px;
 		background: rgb(255, 255, 255);
@@ -152,9 +123,11 @@
 	}
 
 	.btn:hover {
-		box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Увеличенный box-shadow */
-		transform: scale(1.05); /* Небольшой эффект увеличения */
-		transition: box-shadow 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+		box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
+		transform: scale(1.05); 
+		transition:
+			box-shadow 0.3s ease,
+			transform 0.3s ease; 
 	}
 }
 
@@ -170,7 +143,7 @@
 	}
 
 	&__content {
-		flex: 0 0 45%; /* Текст занимает 40% ширины */
+		flex: 0 0 45%; 
 		padding: 60px;
 		h2 {
 			color: rgb(0, 0, 0);
@@ -194,7 +167,7 @@
 	}
 
 	&__image {
-		flex: 0 0 55%; /* Изображение занимает 60% ширины */
+		flex: 0 0 55%; 
 		padding-left: 80px;
 		@media (max-width: 768px) {
 			padding: 0px;
@@ -210,11 +183,11 @@
 
 		&__content {
 			padding: 40px 10px;
-			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
+			flex: 1 0 100%; 
 		}
 		&__image {
 			padding: 10px;
-			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
+			flex: 1 0 100%; 
 			@media (max-width: 768px) {
 				padding: 0px;
 			}
@@ -259,7 +232,7 @@
 	}
 
 	&__content {
-		flex: 0 0 45%; /* Текст занимает 40% ширины */
+		flex: 0 0 45%; 
 		padding: 60px;
 		h2 {
 			color: #fff;
@@ -282,7 +255,7 @@
 			position: relative;
 			padding-left: 20px;
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				left: 0;
 				top: 9%;
@@ -296,7 +269,7 @@
 	}
 
 	&__image {
-		flex: 1 0 55%; /* Изображение занимает 60% ширины */
+		flex: 1 0 55%; 
 		padding-right: 80px;
 
 		@media (max-width: 768px) {
@@ -313,11 +286,11 @@
 
 		&__content {
 			padding: 40px 10px;
-			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
+			flex: 1 0 100%; 
 		}
 		&__image {
 			padding: 10px;
-			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
+			flex: 1 0 100%; 
 			@media (max-width: 768px) {
 				padding: 0px;
 			}
@@ -362,7 +335,7 @@
 	}
 
 	&__content {
-		flex: 0 0 50%; /* Текст занимает 40% ширины */
+		flex: 0 0 50%; 
 		padding: 60px;
 		h2 {
 			color: rgb(0, 0, 0);
@@ -386,9 +359,8 @@
 	}
 
 	&__image {
-		flex: 0 0 50%; /* Изображение занимает 60% ширины */
+		flex: 0 0 50%; 
 		padding-right: 80px;
-	
 
 		img {
 			width: 100%;
@@ -406,12 +378,11 @@
 
 		&__content {
 			padding: 40px 10px;
-			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
+			flex: 1 0 100%; 
 		}
 		&__image {
 			padding: 10px;
-			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
-			
+			flex: 1 0 100%; 
 		}
 
 		&__content {

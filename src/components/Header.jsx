@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { ReactComponent as Logo } from "../assets/svg/logo.svg";
-import "./styles.scss"; // Импортируем файл стилей
+import "./styles.scss";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,7 @@ const Header = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    setCurrentSubMenu(null); // Закрыть подменю при открытии/закрытии основного меню
+    setCurrentSubMenu(null);
   };
 
   const handleLinkClick = () => {
@@ -44,12 +44,14 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo Section */}
         <div className="flex items-center space-x-3 text-center">
-         <a href="/"> <Logo /> </a>
+          <a href="/">
+            {" "}
+            <Logo />{" "}
+          </a>
           <span className="text-xl font-bold hidden lg:block">
             <a href="/">Matthew Matthews Brand</a>
           </span>
         </div>
-
         {/* Navigation Links for Desktop */}
         <nav className="hidden md:flex space-x-8 text-sm font-bold relative">
           {/* Replic Public Menu */}
@@ -91,7 +93,6 @@ const Header = () => {
                   href="/product"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-                 
                 >
                   Solo Studio Pro
                 </a>
@@ -99,7 +100,6 @@ const Header = () => {
                   href="/product"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-               
                 >
                   Solo Studio Mini
                 </a>
@@ -107,7 +107,6 @@ const Header = () => {
                   href="/product"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-              
                 >
                   VALVEX AMP
                 </a>
@@ -115,7 +114,6 @@ const Header = () => {
                   href="/product"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-              
                 >
                   OldChannel
                 </a>
@@ -162,7 +160,6 @@ const Header = () => {
                   href="/"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-                
                 >
                   Mixing & Mastering
                 </a>
@@ -170,7 +167,6 @@ const Header = () => {
                   href="/"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-                
                 >
                   Online Artist
                 </a>
@@ -178,7 +174,6 @@ const Header = () => {
                   href="/distribution"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 hover:underline "
-               
                 >
                   Distribution
                 </a>
@@ -186,32 +181,16 @@ const Header = () => {
             )}
           </div>
 
-          <a
-            href="/"
-            onClick={handleLinkClick}
-            className=""
-          >
+          <a href="/" onClick={handleLinkClick} className="">
             World Net States
           </a>
-          <a
-            href="/history"
-            onClick={handleLinkClick}
-            className=""
-          >
+          <a href="/history" onClick={handleLinkClick} className="">
             Магазин
           </a>
-          <a
-            href="/history"
-            onClick={handleLinkClick}
-            className=""
-          >
+          <a href="/history" onClick={handleLinkClick} className="">
             О нас
           </a>
-          <a
-            href="/about"
-            onClick={handleLinkClick}
-            className=""
-          >
+          <a href="/about" onClick={handleLinkClick} className="">
             Контакты
           </a>
         </nav>
@@ -250,7 +229,9 @@ const Header = () => {
           {/* Фиксированный хедер с логотипом и кнопкой закрытия */}
           <div className="flex justify-between items-center px-6 py-4">
             {/* Логотип */}
-           <a href="/"><Logo /></a> 
+            <a href="/">
+              <Logo />
+            </a>
             {/* Кнопка закрытия */}
             <button
               onClick={() => setIsOpen(false)}
@@ -317,28 +298,16 @@ const Header = () => {
                     />
                   </svg>
                 </button>
-                <a
-                  href="/"
-                  className="font-bold"
-                >
+                <a href="/" className="font-bold">
                   World Net States
                 </a>
-                <a
-                  href="/"
-                  className="font-bold"
-                >
+                <a href="/" className="font-bold">
                   Магазин
                 </a>
-                <a
-                  href="/history"
-                  className="font-bold"
-                >
+                <a href="/history" className="font-bold">
                   О нас
                 </a>
-                <a
-                  href="/about"
-                  className="font-bold"
-                >
+                <a href="/about" className="font-bold">
                   Контакты
                 </a>
               </nav>
@@ -365,50 +334,29 @@ const Header = () => {
                 </button>
                 {currentSubMenu === "replic" && (
                   <nav className="flex flex-col items-end space-y-4">
-                    <a
-                      href="/product"
-                      className="font-bold"
-                    >
+                    <a href="/product" className="font-bold">
                       Solo Studio Pro
                     </a>
-                    <a
-                      href="/product"
-                      className="font-bold"
-                    >
+                    <a href="/product" className="font-bold">
                       Solo Studio Mini
                     </a>
-                    <a
-                      href="/product"
-                      className="font-bold"
-                    >
+                    <a href="/product" className="font-bold">
                       VALVEX AMP
                     </a>
-                    <a
-                      href="/product"
-                      className="font-bold"
-                    >
+                    <a href="/product" className="font-bold">
                       OldChannel
                     </a>
                   </nav>
                 )}
                 {currentSubMenu === "music" && (
                   <nav className="flex flex-col items-end space-y-4">
-                    <a
-                      href="/"
-                      className="font-bold"
-                    >
+                    <a href="/" className="font-bold">
                       Mixing & Mastering
                     </a>
-                    <a
-                      href="/"
-                      className="font-bold"
-                    >
+                    <a href="/" className="font-bold">
                       Online Artist
                     </a>
-                    <a
-                      href="/distribution"
-                      className="font-bold"
-                    >
+                    <a href="/distribution" className="font-bold">
                       Distribution
                     </a>
                   </nav>
