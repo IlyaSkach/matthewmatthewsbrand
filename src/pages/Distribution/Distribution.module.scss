@@ -1,3 +1,5 @@
+
+
 .titlesection {
   position: relative;
   width: 100%;
@@ -237,6 +239,7 @@
       h2 {
         font-size: 24px;
         line-height: 30px;
+				padding-top: 25px;
       }
 
       p {
@@ -253,7 +256,7 @@
   border-bottom: 1px solid #fff;
 
   @media (max-width: 768px) {
-    padding: 60px 10px;
+    padding: 80px 10px;
   }
 
   h2 {

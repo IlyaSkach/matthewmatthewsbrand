@@ -5,7 +5,6 @@ import historyPageImage from "../../assets/images/historypage.png";
 import DistributionPageImage from "../../assets/images/distpage.png";
 
 const Distribution = () => {
-  
   return (
     <>
       <section className={styles.titlesection}>
@@ -23,7 +22,7 @@ const Distribution = () => {
         </nav>
         <button className={styles.btn}>GET UNLIMITED ACCESS</button>
       </section>
-      <section className={styles.splitSection} id="features" >
+      <section className={styles.splitSection} id="features">
         <div className={styles.splitSection__image}>
           <img src={secondPageImage} alt="second page img" />
         </div>
@@ -55,10 +54,10 @@ const Distribution = () => {
           <button className={styles.btnblack}>GET UNLIMITED ACCESS</button>
         </div>
       </section>
-      <section class={styles.musicSection} id="song">
+      <section className={styles.musicSection} id="song">
         <h2>Our Music and Artists</h2>
-        <div class={styles.musicSection__parts}>
-          <div class={styles.musicSection__parts_song}>
+        <div className={styles.musicSection__parts}>
+          <div className={styles.musicSection__parts_song}>
             <p>Most Popular Released Songs</p>
             <div className={styles.historysection__music}>
               <img src={historyPageImage} alt="history" />
@@ -116,9 +115,9 @@ const Distribution = () => {
             </div>
           </div>
 
-          <div class={styles.musicSection__parts_artist}>
+          <div className={styles.musicSection__parts_artist}>
             <p> Most Popular Artists</p>
-            <div class={styles.musicSection__parts_img}>
+            <div className={styles.musicSection__parts_img}>
               <div className={styles.imageContainer}>
                 <img
                   src={DistributionPageImage}
@@ -127,7 +126,7 @@ const Distribution = () => {
                 />
                 <div className={styles.textOverlay}>MATTHEW MATTHEWS</div>
               </div>
-							<div className={styles.imageContainer}>
+              <div className={styles.imageContainer}>
                 <img
                   src={DistributionPageImage}
                   alt="Matthew Matthews"
@@ -135,7 +134,7 @@ const Distribution = () => {
                 />
                 <div className={styles.textOverlay}>MATTHEW MATTHEWS</div>
               </div>
-							<div className={styles.imageContainer}>
+              <div className={styles.imageContainer}>
                 <img
                   src={DistributionPageImage}
                   alt="Matthew Matthews"
@@ -143,7 +142,7 @@ const Distribution = () => {
                 />
                 <div className={styles.textOverlay}>MATTHEW MATTHEWS</div>
               </div>
-							<div className={styles.imageContainer}>
+              <div className={styles.imageContainer}>
                 <img
                   src={DistributionPageImage}
                   alt="artist"

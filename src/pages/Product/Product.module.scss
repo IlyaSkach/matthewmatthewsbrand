@@ -202,7 +202,7 @@
 		flex-direction: column;
 
 		&__content {
-			padding: 10px;
+			padding: 40px 10px;
 			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
 		}
 		&__image {
@@ -305,7 +305,7 @@
 		flex-direction: column;
 
 		&__content {
-			padding: 10px;
+			padding: 40px 10px;
 			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
 		}
 		&__image {
@@ -397,13 +397,18 @@
 	@media (max-width: 768px) {
 		flex-direction: column-reverse;
 
-		&__content,
+		&__content {
+			padding: 40px 10px;
+			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
+		}
 		&__image {
 			padding: 10px;
 			flex: 1 0 100%; /* На меньших экранах элементы занимают 100% ширины */
+			
 		}
 
 		&__content {
+			padding-top: 90px;
 			h2 {
 				font-size: 28px;
 				line-height: 34px;

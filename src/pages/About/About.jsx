@@ -9,7 +9,7 @@ const About = () => {
         <div class={styles.aboutsection__content}>
           <h1>Contact Us </h1>
           <h3>Все наши контакты</h3>
-
+    
           <p>
             Администрация{" "}
             <a
@@ -46,6 +46,7 @@ const About = () => {
               support@matthewmatthewsbrand.store
             </a>
           </p>
+         
           <div class={styles.discl}>Все почтовые ящики проверяются раз в сутки.</div>
         </div>
         <div class={styles.aboutsection__img}>

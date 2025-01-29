@@ -217,7 +217,7 @@ const Footer = () => {
             <Logo />
             <div>
               <h3 className="text-xl font-bold">Matthew Matthews Brand</h3>
-              <p className="text-base">
+              <p className="footer-text" >
                 Create your vision with music and be happy!
               </p>
             </div>

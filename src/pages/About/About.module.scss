@@ -84,6 +84,7 @@
     &__content {
       width: 100%;
       padding: 20px;
+      text-align: center;
       h1 {
         padding-top: 100px;
         padding-left: 0;
@@ -97,7 +98,7 @@
         line-height: 19px;
         text-align: left;
         max-width: 90%;
-        margin: 0 auto;
+        padding-left: 40px;
         &::before {
          display: none;
           
@@ -121,6 +122,7 @@
       p {
         font-size: 14px;
         line-height: 17px;
+        padding-left: 40px;
       }
     }
     &__img {
