@@ -6,13 +6,13 @@ const Home = () => {
   return (
     <>
       <Slider />
-      <section class={styles.herosection}>
-        <div class={styles.herocontent}>
-          <div class={styles.herocontent__title}>My best ideas brought to life are now available to the world.</div>
-          <div class={styles.herocontent__description}>Matthew Matthews, CEO and Sound Engineer</div>
+      <section className={styles.herosection}>
+        <div className={styles.herocontent}>
+          <div className={styles.herocontent__title}>My best ideas brought to life are now available to the world.</div>
+          <div className={styles.herocontent__description}>Matthew Matthews, CEO and Sound Engineer</div>
         </div>
       </section>
-      <section class={styles.aboutsection}>
+      <section className={styles.aboutsection}>
         <h1>What is a Matthew Matthews Brand?</h1>
         <p>
           Ever since its joke txt created his famous early console modules in
@@ -30,13 +30,13 @@ const Home = () => {
         </p>
         <button>Learn More</button>
       </section>
-      <section class={styles.productsection}>
-        <div class={styles.productsound}>
+      <section className={styles.productsection}>
+        <div className={styles.productsound}>
           <button>
           GO TO HYBRID SOUND
           </button>
         </div>
-        <div class={styles.productmusic}>
+        <div className={styles.productmusic}>
           <button>
           GO TO CREATING MUSIC
           </button>

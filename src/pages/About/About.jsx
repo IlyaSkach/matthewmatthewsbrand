@@ -5,8 +5,8 @@ import contactPageImage from "../../assets/images/contactpage.png";
 const About = () => {
   return (
     <>
-      <section class={styles.aboutsection}>
-        <div class={styles.aboutsection__content}>
+      <section className={styles.aboutsection}>
+        <div className={styles.aboutsection__content}>
           <h1>Contact Us </h1>
           <h3>Все наши контакты</h3>
 
@@ -47,11 +47,11 @@ const About = () => {
             </a>
           </p>
 
-          <div class={styles.discl}>
+          <div className={styles.discl}>
             Все почтовые ящики проверяются раз в сутки.
           </div>
         </div>
-        <div class={styles.aboutsection__img}>
+        <div className={styles.aboutsection__img}>
           <img src={contactPageImage} alt="contact" />
         </div>
       </section>

@@ -5,7 +5,7 @@ import historyPageImage from "../../assets/images/historypage.png";
 const History = () => {
   return (
     <>
-      <section class={styles.historysection}>
+      <section className={styles.historysection}>
         <h1>History of Matthew Matthews Brand</h1>
         <h2>2023</h2>
         <h3>Creating of a organisation</h3>
