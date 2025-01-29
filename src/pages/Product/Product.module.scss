@@ -1,3 +1,10 @@
+.splitSection, 
+.splitreturnSection,
+.splityoutubeSection {
+  scroll-margin-top: 80px; /* Высота закрепленного хедера */
+}
+
+
 .titlesection {
 	position: relative;
 	width: 100%;
@@ -408,7 +415,6 @@
 		}
 
 		&__content {
-			padding-top: 90px;
 			h2 {
 				font-size: 28px;
 				line-height: 34px;

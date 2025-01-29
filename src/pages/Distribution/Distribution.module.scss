@@ -1,4 +1,8 @@
 
+.splitSection, 
+.musicSection {
+  scroll-margin-top: 80px; /* Высота закрепленного хедера */
+}
 
 .titlesection {
   position: relative;
@@ -97,13 +101,6 @@
 			display: inline-block;
 		}
   }
-
-  
-
-  // .link:not(:last-child)::after {
-  //   text-decoration: none;
-  //   display: inline-block;
-  // }
 
   .btn {
     border-radius: 5px;
@@ -256,7 +253,7 @@
   border-bottom: 1px solid #fff;
 
   @media (max-width: 768px) {
-    padding: 80px 10px;
+    padding: 60px 10px;
   }
 
   h2 {

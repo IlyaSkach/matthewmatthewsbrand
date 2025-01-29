@@ -250,7 +250,7 @@ const Header = () => {
           {/* Фиксированный хедер с логотипом и кнопкой закрытия */}
           <div className="flex justify-between items-center px-6 py-4">
             {/* Логотип */}
-            <Logo />
+           <a href="/"><Logo /></a> 
             {/* Кнопка закрытия */}
             <button
               onClick={() => setIsOpen(false)}
