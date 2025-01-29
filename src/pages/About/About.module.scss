@@ -83,6 +83,7 @@
 
     &__content {
       width: 100%;
+      padding: 20px;
       h1 {
         padding-top: 100px;
         padding-left: 0;
@@ -111,6 +112,7 @@
   @media (max-width: 480px) {
     &__content {
       width: 100%;
+      padding: 20px;
       h1 {
         padding-top: 80px;
         font-size: 25px;

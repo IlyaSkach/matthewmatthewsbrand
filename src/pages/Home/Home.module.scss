@@ -42,8 +42,10 @@
       text-align: left;
 
       // Адаптивность заголовка
-      @media (min-width: 768px) {
-        font-size: 2rem;
+      @media (max-width: 768px) {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        line-height: 36px;
       }
 
       @media (min-width: 1024px) {
@@ -60,8 +62,8 @@
       text-align: left;
 
       // Адаптивность текста
-      @media (min-width: 768px) {
-        font-size: 1rem;
+      @media (max-width: 768px) {
+        line-height: 24px;
       }
 
       @media (min-width: 1024px) {
@@ -70,7 +72,6 @@
     }
   }
 }
-
 
 .aboutsection {
   background-color: #b0b0b0;
@@ -111,7 +112,9 @@
   button:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Увеличенный box-shadow */
     transform: scale(1.05); /* Небольшой эффект увеличения */
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+    transition:
+      box-shadow 0.3s ease,
+      transform 0.3s ease; /* Плавные переходы */
   }
 
   @media (max-width: 1024px) {
@@ -150,7 +153,6 @@
       font-size: 16px;
       padding: 10px 25px;
     }
-    
   }
 
   @media (max-width: 480px) {
@@ -205,7 +207,9 @@
   button:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Увеличенный box-shadow */
     transform: scale(1.05); /* Небольшой эффект увеличения */
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+    transition:
+      box-shadow 0.3s ease,
+      transform 0.3s ease; /* Плавные переходы */
   }
 
   @media (min-width: 768px) {

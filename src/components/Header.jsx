@@ -223,7 +223,7 @@ const Header = () => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-10 w-10"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -258,7 +258,7 @@ const Header = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-10 w-10"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -279,7 +279,7 @@ const Header = () => {
               <nav className="flex flex-col items-end space-y-4">
                 <button
                   onClick={() => openSubMenu("replic")}
-                  className="flex justify-end items-center hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                  className="flex justify-end items-center hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)] font-bold"
                 >
                   <span>Replic Public</span>
                   <svg
@@ -299,7 +299,7 @@ const Header = () => {
                 </button>
                 <button
                   onClick={() => openSubMenu("music")}
-                  className="flex justify-end items-center hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                  className="flex justify-end items-center hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)] font-bold "
                 >
                   <span>Music Production</span>
                   <svg
@@ -319,25 +319,25 @@ const Header = () => {
                 </button>
                 <a
                   href="/"
-                  className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                  className="font-bold"
                 >
                   World Net States
                 </a>
                 <a
                   href="/"
-                  className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                  className="font-bold"
                 >
                   Магазин
                 </a>
                 <a
                   href="/history"
-                  className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                  className="font-bold"
                 >
                   О нас
                 </a>
                 <a
                   href="/about"
-                  className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                  className="font-bold"
                 >
                   Контакты
                 </a>
@@ -367,25 +367,25 @@ const Header = () => {
                   <nav className="flex flex-col items-end space-y-4">
                     <a
                       href="/product"
-                      className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                      className="font-bold"
                     >
                       Solo Studio Pro
                     </a>
                     <a
                       href="/product"
-                      className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                      className="font-bold"
                     >
                       Solo Studio Mini
                     </a>
                     <a
                       href="/product"
-                      className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                      className="font-bold"
                     >
                       VALVEX AMP
                     </a>
                     <a
                       href="/product"
-                      className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                      className="font-bold"
                     >
                       OldChannel
                     </a>
@@ -395,19 +395,19 @@ const Header = () => {
                   <nav className="flex flex-col items-end space-y-4">
                     <a
                       href="/"
-                      className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                      className="font-bold"
                     >
                       Mixing & Mastering
                     </a>
                     <a
                       href="/"
-                      className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                      className="font-bold"
                     >
                       Online Artist
                     </a>
                     <a
                       href="/distribution"
-                      className="hover:shadow-[0_0_10px_0_rgба(255,255,255,0.5)]"
+                      className="font-bold"
                     >
                       Distribution
                     </a>
