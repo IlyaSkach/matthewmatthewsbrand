@@ -35,7 +35,7 @@
 
     &__title {
       color: rgb(255, 255, 255);
-      font-family: Azeret Mono;
+      // font-family: Azeret Mono;
       font-size: 36px;
       font-weight: 700;
       letter-spacing: 0%;
@@ -44,7 +44,7 @@
       // Адаптивность заголовка
       @media (max-width: 768px) {
         padding-top: 20px;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
         line-height: 36px;
       }
 
@@ -55,7 +55,7 @@
 
     &__description {
       color: rgb(255, 255, 255);
-      font-family: Azeret Mono;
+      // font-family: Azeret Mono;
       font-size: 24px;
       font-weight: 700;
       letter-spacing: 0%;
@@ -63,7 +63,8 @@
 
       // Адаптивность текста
       @media (max-width: 768px) {
-        line-height: 24px;
+        font-size: large;
+        padding-bottom: 20px;
       }
 
       @media (min-width: 1024px) {
@@ -107,8 +108,9 @@
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
-  }
 
+   
+  }
   button:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Увеличенный box-shadow */
     transform: scale(1.05); /* Небольшой эффект увеличения */
@@ -193,7 +195,6 @@
   }
 
   button {
-    margin-top: 30px;
     color: black;
     padding: 14px 35px;
     border: none;

@@ -98,26 +98,34 @@
 		color: white;
 		position: relative;
 		display: inline-block;
+
+		&:not(:last-child)::after {
+			content: "/";
+			margin-left: 8px;
+			color: white;
+			text-decoration: none;
+			display: inline-block;
+		}
 	}
 
 	
 
-	.link:not(:last-child)::after {
-		content: "/";
-		margin-left: 8px; /* Отступ между ссылкой и символом */
-		color: white; /* Цвет разделителя */
-		text-decoration: none;
-		display: inline;
-	}
+	// .link:not(:last-child)::after {
+	// 	content: "/";
+	// 	margin-left: 8px; /* Отступ между ссылкой и символом */
+	// 	color: white; /* Цвет разделителя */
+	// 	text-decoration: none;
+	// 	display: inline;
+	// }
 
-	.link:not(:last-child)::after {
-		text-decoration: none; /* Гарантируем, что символ "/" не будет подчеркиваться */
-		display: inline-block; /* Убираем влияние текста на оформление псевдоэлемента */
-	}
+	// .link:not(:last-child)::after {
+	// 	text-decoration: none; /* Гарантируем, что символ "/" не будет подчеркиваться */
+	// 	display: inline-block; /* Убираем влияние текста на оформление псевдоэлемента */
+	// }
 
-	.link:last-child {
-		text-decoration: none; /* Подчеркиваем только текст последней ссылки */
-	}
+	// .link:last-child {
+	// 	text-decoration: none; /* Подчеркиваем только текст последней ссылки */
+	// }
 
 	.btn {
 		border-radius: 5px;
@@ -132,7 +140,7 @@
 		padding: 9px 91px;
 
 		@media (max-width: 768px) {
-			margin-top: 15px;
+			margin-top: 25px;
 		}
 	}
 

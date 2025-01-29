@@ -212,7 +212,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Branding and Copyright */}
-        <div className="flex flex-col items-center justify-center space-y-4 relative mt-8 md:mt-0">
+        <div className="flex flex-col items-center justify-center space-y-4 relative mt-12 md:mt-0 footer-logo">
           <div className="flex items-center space-x-3">
             <Logo />
             <div>
