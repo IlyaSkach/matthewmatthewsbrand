@@ -41,15 +41,15 @@ const Header = () => {
 
   return (
     <header className="bg-black text-white fixed top-0 left-0 w-full z-50">
-      <div className="container mx-auto flex items-center justify-between py-4 px-6">
+      <div className="container mx-auto flex items-center justify-between py-4 px-6 cont">
         {/* Logo Section */}
         <div className="flex items-center space-x-3 text-center">
           <a href="/">
             {" "}
             <Logo />{" "}
           </a>
-          <span className="text-xl font-bold hidden lg:block">
-            <a href="/">Matthew Matthews Brand</a>
+          <span className="text-xl font-bold hidden lg:block logo-text">
+            <a className="logo-text" href="/">Matthew Matthews Brand</a>
           </span>
         </div>
         {/* Navigation Links for Desktop */}
